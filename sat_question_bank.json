@@ -137,7 +137,7 @@
       "D": "$35"
     },
     "correct_choice": "C",
-    "rationale": "First, calculate the discount amount: $25\\% \\text{ of } \\$40 = 0.25 \\times \\$40 = \\$10$. Then, subtract the discount from the original price: $\\$40 - \\$10 = \\$30$."
+    "rationale": "First, calculate the discount amount: $25\\% \\text{ of } 40 = 0.25 \\times 40 = 10$. Then, subtract the discount from the original price: $40 - 10 = 30$."
   },
   {
     "id": "easy-math-11",
