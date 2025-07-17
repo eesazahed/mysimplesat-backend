@@ -1,7 +1,8 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response
 from flask_cors import CORS
 import os
 import json
+import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -14,7 +15,9 @@ def load_updates():
 
 @app.route('/', methods=['GET'])
 def index():
-    return jsonify({"message": "hello"})
+    url = 'https://raw.githubusercontent.com/eesazahed/sat-prep-app/refs/heads/main/public/index.html'
+    r = requests.get(url)
+    return Response(r.text, content_type='text/html')
 
 
 @app.route('/updates', methods=['GET'])
