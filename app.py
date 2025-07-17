@@ -16,7 +16,7 @@ def load_updates():
 @app.route('/', methods=['GET'])
 def index():
     url = 'https://raw.githubusercontent.com/eesazahed/sat-prep-app/refs/heads/main/public/index.html'
-    r = requests.get(url)
+    r = requests.get(url, headers={'Cache-Control': 'no-cache'})
     return Response(r.text, content_type='text/html')
 
 
